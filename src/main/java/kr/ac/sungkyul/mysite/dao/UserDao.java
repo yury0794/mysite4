@@ -45,7 +45,6 @@ public class UserDao {
 	}
 
 	public void insert(UserVo vo) {
-		int count = sqlSession.insert("user.insert", vo);
-		System.out.println(count);
+		sqlSession.insert("user.insert", vo);
 	}
 }

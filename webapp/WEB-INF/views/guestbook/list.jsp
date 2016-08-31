@@ -10,7 +10,7 @@
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/guestbook.css" rel="stylesheet"
+<link href="/mysite4/assets/css/guestbook.css" rel="stylesheet"
 	type="text/css">
 </head>
 <body>
@@ -18,8 +18,7 @@
 		<jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
 		<div id="content">
 			<div id="guestbook">
-				<form action="/mysite/gb" method="post">
-					<input type="hidden" name="a" value="add">
+				<form action="/mysite4/guestbook/insert" method="post">
 					<table>
 						<tr>
 							<td>이름</td>
@@ -45,7 +44,7 @@
 								<td>[${countList-s.index}]</td>
 								<td>${vo.name}</td>
 								<td>${vo.regDate}</td>
-								<td><a href="/mysite/gb?a=deleteform&no=${vo.no}">삭제</a></td>
+								<td><a href="/mysite4/guestbook/deleteform/${vo.no}">삭제</a></td>
 							</tr>
 							<tr>
 								<td colspan=4>${fn:replace(vo.content, newLine, "<br>")}</td>

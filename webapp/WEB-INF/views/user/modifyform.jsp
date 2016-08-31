@@ -7,7 +7,7 @@
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/user.css" rel="stylesheet" type="text/css">
+<link href="/mysite4/assets/css/user.css" rel="stylesheet" type="text/css">
 <c:if test='${"success"==param.res}'>
 	<script>	
 		alert("성공적으로 수행했습니다");
@@ -19,17 +19,16 @@
 		<c:import url='/WEB-INF/views/include/header.jsp'/>
 		<div id="content">
 			<div id="user">
-				<form id="join-form" name="modifyForm" method="post" action="/mysite/user">
-					<input type="hidden" name="a" value="modify">
+				<form id="join-form" name="modifyform" method="post" action="/mysite4/user/modify">
 					<label class="block-label" for="name">이름</label>
-					<input id="name" name="name" type="text" value="${userVo.name}">
+					<input id="name" name="name" type="text" value="${authUser.name}">
 					<label class="block-label">패스워드</label>
 					<input name="password" type="password" value="">
 					
 					<fieldset>
 						<legend>성별</legend>
 						<c:choose>
-							<c:when test='${"female"==userVo.gender}'>
+							<c:when test='${"female" == authUser.gender}'>
 								<label>여</label>
 								<input type="radio" name="gender" value="female" checked="checked">
 								<label>남</label>

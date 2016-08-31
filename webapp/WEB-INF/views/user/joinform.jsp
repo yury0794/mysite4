@@ -94,7 +94,7 @@ $(function(){
 		<c:import url='/WEB-INF/views/include/header.jsp'/>
 		<div id="content">
 			<div id="user">
-				<form id="join-form" name="joinForm" method="post" action="/mysite4/user/join">
+				<form id="join-form" name="joinform" method="post" action="/mysite4/user/join">
 					<label class="block-label" for="name">이름</label>
 					<input id="name" name="name" type="text" value="">
 					<label class="block-label" for="email">이메일</label>
